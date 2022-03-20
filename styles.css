@@ -1,0 +1,69 @@
+.carousel-container {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 100px;
+  border: 3px solid green;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.carousel-container .images-container {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: auto;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.carousel-container .img-container {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  pointer-events: none;
+  border: 1px solid red;
+}
+
+.carousel-container .img-container .offset-container {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid blue;
+}
+
+.carousel-container .img-container .offset-container .carousel-img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  pointer-events: none;
+}
+
+.carousel-container-grabed {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+/*# sourceMappingURL=styles.css.map */
