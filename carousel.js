@@ -66,7 +66,11 @@ const changeImgOffset = (currentPos) => { //changing offset for all pictures
             let centerDx = currentPos - carouselCenter - (imgWidth + imgGap)*(2-index); //the offset between central position and current position
             //console.log('index ', index, 'centerDx ', centerDx);
             let k = 2*offsetMax / (carouselWidth + imgWidth); //calculating the k to reach max offset on the carousel edge 
-            el.style.left = `${k*centerDx}px`
+            if (k*centerDx > 0) {
+                el.style.left = `-${Math.pow(k*centerDx, 1.3)}px`
+            }   else {
+                el.style.left = `-${Math.pow(k*centerDx, 1.3)}px`
+            }
     })
 }
 
@@ -116,7 +120,7 @@ function inertiaMovement(dx) {
             clearInterval(inertiaCounter);
             console.log('Killing');
         } else {
-            dxRibbon = dxRibbon - dx/20;
+            dxRibbon = dxRibbon - dx/25;
             redrawCarousel(0);
         }
     }, 1);
