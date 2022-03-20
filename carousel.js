@@ -62,15 +62,10 @@ const changePicsOrder = (direction) => { //change pictures to show in picsArray 
 
 const changeImgOffset = (currentPos) => { //changing offset for all pictures
     offsetList.forEach((el, index) => {
-        //console.clear();
             let centerDx = currentPos - carouselCenter - (imgWidth + imgGap)*(2-index); //the offset between central position and current position
-            //console.log('index ', index, 'centerDx ', centerDx);
             let k = 2*offsetMax / (carouselWidth + imgWidth); //calculating the k to reach max offset on the carousel edge 
-            if (k*centerDx > 0) {
-                el.style.left = `-${Math.pow(k*centerDx, 1.3)}px`
-            }   else {
-                el.style.left = `${Math.pow(k*centerDx, 1.3)}px`
-            }
+                el.style.left = `${-k*centerDx + imgGap / 2}px`
+
     })
 }
 
@@ -147,7 +142,6 @@ carousel.addEventListener('mouseout', e => stopMove(e))
 carouselInertionTimer = setInterval((e) => { //check mouse speed every 100ms
     inertiaPreviousMouseX = inertiaCurrentMouseX;
     inertiaCurrentMouseX = dxMouse;
-    //inertiaDxMouseX = inertiaCurrentMouseX - inertiaPreviousMouseX;
 }, 100);
 
 
