@@ -69,7 +69,7 @@ const changeImgOffset = (currentPos) => { //changing offset for all pictures
             if (k*centerDx > 0) {
                 el.style.left = `-${Math.pow(k*centerDx, 1.3)}px`
             }   else {
-                el.style.left = `-${Math.pow(k*centerDx, 1.3)}px`
+                el.style.left = `${Math.pow(k*centerDx, 1.3)}px`
             }
     })
 }
