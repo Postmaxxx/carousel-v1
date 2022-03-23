@@ -1,0 +1,26 @@
+.carousel-max-container {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  margin-left: 100px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.carousel-max-container-grabbed {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.carousel-max-container2 {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.carousel-max-container2-grabbed {
+  cursor: none;
+}
+/*# sourceMappingURL=carousel-max.css.map */
